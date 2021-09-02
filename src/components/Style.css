@@ -1,0 +1,47 @@
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftBlock {
+  margin: 20px 50px 10px 20px;
+}
+
+.rightBlock {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 950px;
+  margin-top: 50px;
+}
+.blockDay {
+  width: 180px;
+  height: 150px;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+h3 {
+  font: 600 24px/1 Arial;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+h2 {
+  font: 600 26px/1 Arial;
+  margin: 0 auto;
+}
+.skyBtn {
+  background-color: #9fd1eb;
+  width: 150px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
