@@ -1,21 +1,26 @@
-import React, { Component } from "react";
-import { Route } from 'react-router-dom';
-import SelectedCity from "./components/SelectedCity";
-import { Link } from "react-router-dom";
-import Location from "./home/Location";
+import React from "react";
+import { Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import LocationPage from "./pages/LocationPage";
+import WeatherPage from "./pages/WeatherPage";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <SelectedCity />
-        {/* <Route exact path="/" component={SelectedCity} /> */}
-
-        <Route path='/currentLocation' component={Location} />
-        <Link to='/currentLocation'>
-          <button> My location </button>
-        </Link>
-      </div>
-    );
-  }
+export default function App() {
+  return (
+    <>
+      <Router>
+        <Link to="/location">Location</Link>
+        <br />
+        <Link to="/search">Search</Link>
+        <Switch>
+          <Route path="/search">
+            <WeatherPage />
+          </Route>
+          <Route path="/location">
+            <LocationPage />
+          </Route>
+          <Redirect from="/" to="/search" />
+        </Switch>
+      </Router>
+    </>
+  );
 }

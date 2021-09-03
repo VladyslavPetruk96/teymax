@@ -3,7 +3,7 @@ import React from "react";
 const TodayWeather = (props) => (
   <div>
     {props.city && (
-      <div className="leftBlock">
+      <div>
         <p>
           Местоположение: {props.city}, {props.country}
         </p>
